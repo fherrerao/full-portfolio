@@ -1,5 +1,6 @@
 class Api::V1::ProjectsController < ApplicationController
   before_action :set_project, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
   protect_from_forgery with: :null_session
 
   # GET /projects or /projects.json
