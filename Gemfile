@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.1"
 
+# Devise gem
+gem "devise"
+
 # Webpack and react gems
 gem "webpacker"
 gem "react-rails"
