@@ -21,7 +21,9 @@ class Api::V1::ProjectsController < ApplicationController
 
   # POST /projects or /projects.json
   def create
-    @project = Project.new(project_params)    
+    @project = Project.new(project_params)
+    @project.user = current_user
+    
     if @project.save        
       render json: { message: "Project was succesfully created!" }, status: :created
     else
