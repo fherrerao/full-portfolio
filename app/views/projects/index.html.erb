@@ -3,10 +3,14 @@
 <div id="projects">
   <% @projects.each do |project| %>
     <%= render project %>
-    <p>
-      <%= link_to "Show this project", project %>
-    </p>
+    <% if can? :update, @project %>
+      <p>
+        <%= link_to "Show this project", project %>
+      </p>
+    <% end %>
   <% end %>
 </div>
 
-<%= link_to "New project", new_project_path %>
+<% if can? :create, @project %>
+  <%= link_to "New project", new_project_path %>
+<% end %>
