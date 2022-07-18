@@ -23,5 +23,10 @@
     <strong>Tech 3:</strong>
     <%= project.tech_3 %>
   </p>
+  <% if project.image.attached? %>
+    <div>
+      <%= image_tag project.image %>
+    </div>
+  <% end %>
 
 </div>
