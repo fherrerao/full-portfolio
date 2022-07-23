@@ -3,11 +3,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.1"
 
-# Azure Storage
-# gem "azure-storage-blob", require: false
-
 # Authorization with cancancan
 gem "cancancan"
+
+# Google cloud storage
+gem "google-cloud-storage"
 
 # Devise gem
 gem "devise"
